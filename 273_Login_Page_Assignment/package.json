@@ -1,0 +1,16 @@
+{
+  "name": "273_Login_Page_Assignment",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "ejs": "*",
+    "express": "3.2.6",
+    "express-session": "^1.15.5",
+    "mysql": "^2.14.1",
+    "nodemon": "^1.12.1"
+  }
+}

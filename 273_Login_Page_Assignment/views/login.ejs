@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+ 	<script src="/JS/jquery-3.2.1.min.js"></script>
+
+	<link href="/JS/bootstrap.min.css" rel="stylesheet">
+	<script src="/JS/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <style type="text/css">
+    .row {
+	padding: 15px;
+	}
+   </style>
+
+</head>
+<body>
+
+
+
+
+<div class="container">
+<div class="col-lg-2">
+</div>
+<div class="col-lg-8">
+
+
+
+<div class="panel panel-primary " style="margin:20px;">
+<div class="panel-heading"><h3>LOGIN</h3>
+</div>
+
+
+
+<div class="panel-body">
+
+
+
+<form action="/checkUser" method="post">
+
+<div>
+
+	<div class='col-sm-12 form-group'>
+		<div class='col-lg-2  col-md-2  ' ></div>
+		<div class='col-lg-2  col-md-2  col-sm-12 ' >
+			<label for='username' class="label label-primary" >Username :</label>
+		</div>
+		<div class='col-sm-4 col-md-4  col-sm-12 '>
+			<input type="text" name='username' id='username'   class="form-control"  placeholder="Username..." aria-describedby="basic-addon1" required />
+		</div>
+		<div class='col-lg-1  col-md-1  col-sm-12 '> </div>
+	</div>
+	
+	<div class='col-sm-12 form-group'>
+		<div class='col-lg-2  col-md-2  ' ></div>
+		<div class='col-lg-2  col-sm-2  col-sm-12 ' >
+			<label for='pwd' class="label label-primary" >Password :</label>
+		</div>
+		<div class='col-sm-4 col-sm-4  col-sm-12 '>
+			<input type="password" name='password' id='pwd'   class="form-control"  placeholder="Password..." aria-describedby="basic-addon1"  required/>
+		</div>
+		<div class='col-lg-1  col-md-1  col-sm-12 '> </div>
+	</div>
+	
+	<div class='col-sm-12 form-group'>
+		<div class='col-sm-4 ' style="text-align: right;">
+		</div>
+		<div class='col-sm-2'>
+			<input class='btn btn-info' type="submit">
+		</div>
+	</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-2">
+</div>
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

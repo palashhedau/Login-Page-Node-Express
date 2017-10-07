@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SIGN UP</title>
+    <script src="/JS/jquery-3.2.1.min.js"></script>
+
+	<link href="/JS/bootstrap.min.css" rel="stylesheet">
+	<script src="/JS/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script type="text/javascript" src="/JS/Validation.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    
+    <style type="text/css">
+    .row {
+	padding: 10px;
+	}
+   </style>
+
+    
+  </head>
+  <body>
+ 
+ 
+
+ 
+
+ <div class="panel panel-primary " style="margin:5px;">
+	<div class="panel-heading">
+        	<h3 class="panel-title">Registration Form</h3>
+	</div>
+ 
+ <div class="panel-body">
+ 
+	<form action="/registrationSuccess" method="post">
+	
+	<div>
+	
+		<div class="row padd">
+			<div class='form-group'>
+			<div class='col-lg-3'></div>
+				<div class='col-lg-1 col-md-1 col-sm-12' >
+					<label for='username' class="label label-primary" >Username :</label>
+				</div>
+				<div class='col-lg-2 col-md-2 col-sm-12'>
+					<input type="text" name='username'  onkeyup="validateName()"  id='username'   class="form-control"  placeholder="Username..." aria-describedby="basic-addon1" required />
+				</div>
+				<div class='col-lg-6 '><span id="errorName" style="color: red"></span> </div>
+			</div>
+		</div>
+		
+		<div class="row padd">
+			<div class='form-group'>
+				<div class='col-lg-3'></div>
+				<div class='col-lg-1 col-md-1 col-sm-12'>
+					<label for='password' class="label label-primary" >Password :</label>
+				</div>
+				<div class='col-lg-2 col-md-2 col-sm-12'>
+					<input type="password"  onkeyup="validatePassword()" name='password' id='pwd'   class="form-control"  placeholder="Password ..." aria-describedby="basic-addon1" required />
+				</div>
+				<div class='col-lg-6 '><span id="errorPwd" style="color: red"></span></div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<div class="row padd">
+		<div class='form-group'>
+			<div class='col-lg-3'></div>
+			<div class='col-sm-1 col-md-1 col-sm-12' >
+				<label for='fname' class="label label-primary" >First Name :</label>
+			</div>
+			<div class='col-sm-2 col-md-2 col-sm-12'>
+				<input type="text" name='fname'  id='fname' class="form-control"  placeholder="First Name..." aria-describedby="basic-addon1"  required />
+			</div>
+			<div class='col-lg-6'></div>
+		</div>
+		</div>
+		
+		<div class="row padd">
+		<div class='form-group'>
+		<div class='col-lg-3'></div>
+			<div class='col-sm-1 col-md-1 col-sm-12' >
+				<label for='lname' class="label label-primary" >Last Name :</label>
+			</div>
+			<div class='col-lg-3 col-md-2 col-sm-12'>
+				<input type="text" name='lname' id='lname'   class="form-control"  placeholder="Last Name..." aria-describedby="basic-addon1"  required />
+			</div>
+			<div class='col-lg-5'></div>
+		</div>
+		</div>
+		
+		<div class="row padd">
+		<div class='form-group'>
+		<div class='col-lg-3'></div>
+			<div class='col-sm-1 col-md-1 col-sm-12'>
+				<label for='lname' class="label label-primary" >DOB :</label>
+			</div>
+			<div class='col-sm-2 col-md-2 col-sm-12'>
+				<input type="date" name='dob' id='fname'   class="form-control"  aria-describedby="basic-addon1"  required/>
+			</div>
+			<div class='col-lg-6'></div>
+		</div>
+		</div>
+		
+		<div class="row padd">
+		<div class='form-group'>
+		<div class='col-lg-3'></div>
+			<div class='col-sm-1 col-md-1 col-sm-12'>
+				<label for='lname' class="label label-primary" >GENDER :</label>
+			</div>
+			<div class='col-sm-4 col-md-4 col-sm-12'>
+				<label class="radio-inline"><input type="radio" name="gender" value='Male' required>Male</input></label>
+				<label class="radio-inline"><input type="radio" name="gender" value='Female' required>Female</input></label>
+				<label class="radio-inline"><input type="radio" name="gender" value='Others' required>Other</input></label>
+			</div>
+			<div class='col-lg-4'></div>
+		</div>
+		</div>
+		
+		
+		<div class="row padd">
+		<div class='form-group'>
+		<div class='col-lg-3'></div>
+			<div class='col-sm-1 col-md-1 col-sm-12'>
+			</div>
+			<div class='col-sm-2 col-md-2 col-sm-12'>
+				<button class='btn btn-info'>Submit</button>
+			</div>
+			<div class='col-lg-6'></div>
+		</div>
+		</div>
+		
+	
+	
+	</div>
+	
+	<div class="row padd">
+		<div class='form-group'>
+		<div class='col-lg-3'></div>
+			
+			<div class='col-lg-7 col-md-7 col-sm-12' style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+				<span style="color: red"> <b><%= data.userExist %> <b>  </span>
+			</div>
+			<div class='col-lg-2 col-md-2 col-sm-2'></div>
+		</div>
+	</div>
+	
+	
+	</form>
+</div>
+<div class="panel-footer panel-info"><h3 class="panel-title"><b>Trademark ***</b></h3></div>
+</div>
+
+
+
+  </body>
+</html>

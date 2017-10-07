@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Registration Success</title>
+	 <script src="/JS/jquery-3.2.1.min.js"></script>
+
+	<link href="/JS/bootstrap.min.css" rel="stylesheet">
+	<script src="/JS/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+ <style type="text/css">
+    .padd {
+	padding: 15px;
+	}
+   </style>
+</head>
+<body>
+
+<div class="container">
+
+
+	<div class="text-center">
+        <div class="col-sm-6 col-sm-offset-3 col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 ">
+        <br><br> <h2 style="color: green">Registration Successful</h2>
+        <h3>Dear, <%= data.fname %> <%= data.lname  %> </h3>
+        <p style="font-size:20px">Thank you for registering with us, Please click below to login </p>
+        <a class='btn btn-success' href="/login">Click here to Login</a>
+    <br><br>
+        </div>
+        
+	</div>
+
+
+</div>
+
+
+</body>
+</html>
